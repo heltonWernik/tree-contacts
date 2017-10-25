@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Contact Tree</title>
+    <style>
+        ul{padding-left: 0px;}
+        li{list-style: none;cursor: pointer;}
+        li div{padding: 8px 5px;}
+        li div:hover{background: #add8e6;}
+        .contacts{padding-left: 20px;}
+    </style>
+</head>
+<body ng-app="ContactTree" ng-controller="mainCtrl">
+    
+    <h1>Contact Tree</h1>
+
+    <ul class="groups">
+
+        <li class="group" ng-repeat="contact in contacts">
+
+            <div ng-click="toggleContacts($event, contact)">{{contact.name}}</div>
+
+        </li>
+
+    </ul>
+    
+</body>
+</html>
